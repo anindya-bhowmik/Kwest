@@ -1,2 +1,0 @@
-# Kwest
-Quiz App
