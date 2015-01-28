@@ -383,15 +383,7 @@ NSString *app_link;
     __block __weak SLComposeViewController *slComposeViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
 //    [slComposeViewController setInitialText:[NSString stringWithFormat:@"Total Score of %d via KWEST",(int)[sc calculateUScore]]];
     [slComposeViewController addImage:[UIImage imageNamed:@"Default~ipad"]];
-    //[slComposeViewController addURL:[NSURL URLWithString:@"Playing KWEST : Era - %i. http://bit.ly/33kWst",[[GameData GameDataManager] returnlevel]];
-   // NSString *string=[NSString stringWithFormat:@"Playing KWEST : Era - %i. http://bit.ly/33kWst",[[GameData GameDataManager] returnlevel]];
-   // [slComposeViewController addURL:[NSURL URLWithString:string]];
 
-    //[slComposeViewController addURL:[NSURL URLWithString:[NSString stringWithFormat:@"Playing KWEST : Era - %i. http://bit.ly/33kWst",[[GameData GameDataManager] returnlevel]]]];
-    
-    //[slComposeViewController addURL:[NSURL URLWithString:@"http://bit.ly/33kWst"]];
-    
-    //[slComposeViewController add]
     
     NSString *text = [NSString stringWithFormat:@"Playing KWEST : Era - %i. ",[[GameData GameDataManager] returnlevel]];
     [slComposeViewController setInitialText:text];

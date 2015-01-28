@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <facebookSDK/facebookSDK.h>
+#import <FacebookSDK/FacebookSDK.h>
 @interface FBShareViewController : UIViewController{
     NSString *textToShareInitially;
     UIImage *imageToShare;
