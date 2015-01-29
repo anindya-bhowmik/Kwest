@@ -237,14 +237,14 @@
 }
 
 -(void)showKwestMoreText{
-    [UIView animateWithDuration:1.0 delay:1.0 options:nil
-                     animations:^{
-                         //tutorialView.center = midCenter;
-                         tutorialView.alpha = 0;
-                         tutorialBackgroundImageView.alpha = 0;
-                         moreButton.alpha = 0;
-                     }
-                     completion:^(BOOL finished){
+//    [UIView animateWithDuration:1.0 delay:1.0 options:nil
+//                     animations:^{
+//                         //tutorialView.center = midCenter;
+//                         tutorialView.alpha = 0;
+//                         tutorialBackgroundImageView.alpha = 0;
+//                         moreButton.alpha = 0;
+//                     }
+//                     completion:^(BOOL finished){
                          for(UIView *subViews in [tutorialBackgroundImageView subviews]){
                                                           [subViews removeFromSuperview];
                                                       }
@@ -301,18 +301,18 @@
                          [tutorialBackgroundImageView addSubview:towerButton];
                          [moreButton removeFromSuperview];
                         // [tutorialView removeFromSuperview];
-                     }];
-    [UIView animateWithDuration:1.0 delay:1.0 options:nil
-                     animations:^{
-                         //tutorialView.center = midCenter;
-                         tutorialView.alpha = 1;
-                         tutorialBackgroundImageView.alpha = 1;
-                     }
-                     completion:^(BOOL finished){
-//                         for(UIView *subViews in [tutorialBackgroundImageView subviews]){
-//                             [subViews removeFromSuperview];
-//                         }
-                     }];
+                    // }];
+//    [UIView animateWithDuration:1.0 delay:1.0 options:nil
+//                     animations:^{
+//                         //tutorialView.center = midCenter;
+//                         tutorialView.alpha = 1;
+//                         tutorialBackgroundImageView.alpha = 1;
+//                     }
+//                     completion:^(BOOL finished){
+////                         for(UIView *subViews in [tutorialBackgroundImageView subviews]){
+////                             [subViews removeFromSuperview];
+////                         }
+//                     }];
     
    // [self clearTutorialView];
 //    [UIView animateWithDuration:1.0 delay:0.2 options:nil

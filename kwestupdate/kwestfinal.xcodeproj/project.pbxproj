@@ -740,6 +740,7 @@
 		CE6FEC841A78DEB0004D2B98 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FEC831A78DEB0004D2B98 /* FacebookSDK.framework */; };
 		CE6FEC861A78DFA5004D2B98 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FEC851A78DFA5004D2B98 /* MediaPlayer.framework */; };
 		CE6FEC8A1A78E11C004D2B98 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FEC891A78E11C004D2B98 /* Social.framework */; };
+		CEA441641A79FB8300888865 /* JEProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA441631A79FB8300888865 /* JEProgressView.m */; };
 		DF5B3C90183B41FE003043FC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B3C8F183B41FE003043FC /* Reachability.m */; };
 		DF92D49C183A121100964982 /* 10txt@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DF92D491183A121100964982 /* 10txt@2x~ipad.png */; };
 		DF92D49D183A121100964982 /* 1txt@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DF92D492183A121100964982 /* 1txt@2x~ipad.png */; };
@@ -1688,6 +1689,8 @@
 		CE6FEC851A78DFA5004D2B98 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CE6FEC871A78E100004D2B98 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CE6FEC891A78E11C004D2B98 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CEA441621A79FB8300888865 /* JEProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JEProgressView.h; sourceTree = "<group>"; };
+		CEA441631A79FB8300888865 /* JEProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JEProgressView.m; sourceTree = "<group>"; };
 		DF5B3C8E183B41FE003043FC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DF5B3C8F183B41FE003043FC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DF92D491183A121100964982 /* 10txt@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10txt@2x~ipad.png"; sourceTree = "<group>"; };
@@ -1876,6 +1879,7 @@
 		079DBB25181AC75A00FFE4B7 /* kwestFinal */ = {
 			isa = PBXGroup;
 			children = (
+				CEA441611A79FB8300888865 /* CustomProgressView */,
 				DF5B3C8D183B41FE003043FC /* Reachability */,
 				07FFB3D51826BDE40076EF57 /* FBshareController */,
 				079DC3CE181AF85400FFE4B7 /* DB */,
@@ -3458,6 +3462,16 @@
 			path = Chartboost;
 			sourceTree = "<group>";
 		};
+		CEA441611A79FB8300888865 /* CustomProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				CEA441621A79FB8300888865 /* JEProgressView.h */,
+				CEA441631A79FB8300888865 /* JEProgressView.m */,
+			);
+			name = CustomProgressView;
+			path = kwestfinal/CustomProgressView;
+			sourceTree = SOURCE_ROOT;
+		};
 		DF5B3C8D183B41FE003043FC /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -4183,6 +4197,7 @@
 				079DBC28181AC75C00FFE4B7 /* CCES2Renderer.m in Sources */,
 				079DBC2C181AC75C00FFE4B7 /* CCGLView.m in Sources */,
 				079DBC30181AC75C00FFE4B7 /* CCTouchDispatcher.m in Sources */,
+				CEA441641A79FB8300888865 /* JEProgressView.m in Sources */,
 				079DBC33181AC75C00FFE4B7 /* CCTouchHandler.m in Sources */,
 				079DBC37181AC75C00FFE4B7 /* CCDirectorMac.m in Sources */,
 				079DBC3A181AC75C00FFE4B7 /* CCEventDispatcher.m in Sources */,
@@ -4287,8 +4302,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4306,8 +4321,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
+				PROVISIONING_PROFILE = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -4323,8 +4338,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4339,8 +4354,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
+				PROVISIONING_PROFILE = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

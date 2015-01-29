@@ -44,27 +44,10 @@ CCMenu *brainarenamenu;
         adDidRecieve = FALSE;
         gamedata = [GameData GameDataManager];
         ec = [[EnergyCalculation alloc]init];
-//        if(![gamedata returnpremium]){
-//            [[RevMobAds session] showFullscreen];
-//            
-//            
-//            //[[RevMobAds session]showBanner];
-//            ad = [[RevMobAds session] bannerView];
-//            ad.delegate = self;
-//            [ad loadAd];
-//           
-////            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-////                ad.frame = CGRectMake(0, 0, 768, 114);
-////            } else {
-////                ad.frame = CGRectMake(DeviceWidth/2, 430, 320/2, 50);
-////                
-////            }
-//            
-//            
-//        }
             [self createBackgroundView];
             if([[NSUserDefaults standardUserDefaults]boolForKey:@"Help"]){
                 [self createTutorialBaseView];
+                [self disableTouch];
             }
         
        
@@ -120,7 +103,9 @@ CCMenu *brainarenamenu;
                          //tutorialView.center = midCenter;
                          tutorialView.alpha = 1;
                      }
-                     completion:^(BOOL finished){}];
+                     completion:^(BOOL finished){
+                         
+                     }];
 }
 
 -(void)showMainView{

@@ -263,13 +263,13 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     // [scroll release];
     [towerBaseView addSubview:backButton];
     UIImage *progressBgImage = [UIImage imageNamed:@"progressbg@2x"];
-    UIView *progressTabView = [[UIView alloc]initWithFrame:CGRectMake(DeviceWidth-progressBgImage.size.width, DeviceHeight/8, progressBgImage.size.width, progressBgImage.size.height+DeviceHeight/6)];
+    UIView *progressTabView = [[UIView alloc]initWithFrame:CGRectMake(DeviceWidth-(progressBgImage.size.width), DeviceHeight/8, progressBgImage.size.width, progressBgImage.size.height+DeviceHeight/5)];
     progressTabView.backgroundColor = [UIColor clearColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap)];
     [progressTabView addGestureRecognizer:tap];
     [towerBaseView addSubview:progressTabView];
     
-    progressBgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(DeviceWidth-progressBgImage.size.width, DeviceHeight/4.8, progressBgImage.size.width, progressBgImage.size.height)];
+    progressBgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(DeviceWidth-progressBgImage.size.width, DeviceHeight/4.2, progressBgImage.size.width, progressBgImage.size.height)];
     progressBgImageView.image = progressBgImage;
     progressBgImageView.userInteractionEnabled = YES;
     
@@ -277,18 +277,18 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     [towerBaseView addSubview:progressBgImageView];
     UIImage *fill = [UIImage imageNamed:@"progressbar"];
 
-    progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleBar];
+    progressView = [[JEProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
     progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/2.46, progressBgImageView.frame.size.width, fill.size.height);
-    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap)];
-    [progressView addGestureRecognizer:tap2];
+//    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap)];
+//    [progressView addGestureRecognizer:tap2];
     if([[[Utility getInstance]deviceType]isEqualToString:iPhone5]){
-        progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/2.6, progressBgImageView.frame.size.width, fill.size.height);
+        progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/3.3, progressBgImageView.frame.size.width, 2.0);
     }
     if([[[Utility getInstance]deviceType]isEqualToString:@"_iPad"]){
         progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/3.3, progressBgImageView.frame.size.width, fill.size.height);
     }
     if([gamedata returnlevel]<10){
-        [progressView setProgress:(([gamedata returnknop]-curLevelKnopThreshold)/(nexLevelKnopThreshold-curLevelKnopThreshold))];
+        [progressView setProgress:0.5];
     }
     else if([gamedata returnlevel]>=10){
         [progressView setProgress:100.0f];
@@ -301,14 +301,14 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     transform = CGAffineTransformRotate(transform,  M_PI * -0.5);
     if([[[UIDevice currentDevice] systemVersion]floatValue]>=7.0f){
         transform = CGAffineTransformScale(transform, 1.2f, 4.5f);    }
-//    transform =CGAffineTransformMakeRotation( M_PI * -0.5 );
-//    transform =CGAffineTransformMakeScale(1.0f, 6.0f);
+    transform =CGAffineTransformMakeRotation( M_PI * -0.5 );
+   // transform =CGAffineTransformMakeScale(1.0f, 6.0f);
     
     //progressView.transform= CGAffineTransformMakeRotation( M_PI * -0.5 );
     progressView.transform = transform;
     curLevel =  [[UILabel alloc]initWithFrame:CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/1.66, 70, 30)];
     if([[Utility getInstance].deviceType isEqualToString:iPhone5]){
-        curLevel.frame = CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/1.8, 70, 30);
+        curLevel.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/2.4, 70, 30);
     }
     if([[Utility getInstance].deviceType isEqualToString:@"_iPad"]){
         curLevel.frame = CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/2.4, 70, 30);
@@ -321,7 +321,7 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     
     curLevelKnop =  [[UILabel alloc]initWithFrame:CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/1.54, 70, 30)];
     if([[Utility getInstance].deviceType isEqualToString:iPhone5]){
-        curLevelKnop.frame = CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/1.66, 70, 30);
+        curLevelKnop.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/2.2, 70, 30);
     }
     if([[Utility getInstance].deviceType isEqualToString:@"_iPad"]){
         curLevelKnop.frame = CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/2.2, 70, 30);
@@ -333,7 +333,7 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     curLevelKnop.backgroundColor = [UIColor clearColor];
     [towerBaseView addSubview:curLevelKnop];
     
-    nextLevel =  [[UILabel alloc]initWithFrame:CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/8, 70, 30)];
+    nextLevel =  [[UILabel alloc]initWithFrame:CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/8, 70, 30)];
     
     nextLevel.text = [NSString stringWithFormat:@"E %d",level+1];
     nextLevel.font = [UIFont boldSystemFontOfSize:20];
@@ -342,7 +342,7 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     
     [towerBaseView addSubview:nextLevel];
     
-    nextLevelKnop =  [[UILabel alloc]initWithFrame:CGRectMake(progressBgImageView.frame.origin.x+20, DeviceHeight/5.64, 70, 30)];
+    nextLevelKnop =  [[UILabel alloc]initWithFrame:CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/5.64, 70, 30)];
     nextLevelKnop.text = [NSString stringWithFormat:@"(%d)",nexLevelKnopThreshold];
     nextLevelKnop.font = [UIFont systemFontOfSize:14];
     nextLevelKnop.backgroundColor = [UIColor clearColor];

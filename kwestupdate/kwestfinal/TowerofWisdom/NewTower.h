@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "GameData.h"
+#import "JEProgressView.h"
 @class BasePopUpView;
 @interface NewTower : CCLayer<UIScrollViewDelegate> {
     GameData *gamedata;
@@ -17,7 +18,7 @@
     float pinchScale;
     int zoomCount;
     UIScrollView *towerView;
-    UIProgressView *progressView;
+    JEProgressView *progressView;
     UIImageView *image;
     UIButton *questButton;
     UIButton *backButton;

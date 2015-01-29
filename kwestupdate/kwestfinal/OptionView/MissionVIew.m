@@ -32,7 +32,7 @@
         [Flurry logEvent:@"Basic"];
         stat = [PlayerStatistics StatManager];
         gameData = [GameData GameDataManager];
-        completeImage = [UIImage imageNamed:@"missioncomplete"];
+        completeImage = [UIImage imageWithContentsOfFile:@"missioncomplete"];
         completeImageArray = [[NSMutableArray alloc]init];
         databaseManager = [[Myquslist alloc]init];
         backgroundImage = [CCSprite spriteWithFile:@"questBg.png"];
