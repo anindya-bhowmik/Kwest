@@ -276,19 +276,19 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
 
     [towerBaseView addSubview:progressBgImageView];
     UIImage *fill = [UIImage imageNamed:@"progressbar"];
-
+    NSLog(@"%f %f",fill.size.width,fill.size.height);
     progressView = [[JEProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
     progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/2.46, progressBgImageView.frame.size.width, fill.size.height);
-//    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap)];
-//    [progressView addGestureRecognizer:tap2];
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap)];
+    [progressView addGestureRecognizer:tap2];
     if([[[Utility getInstance]deviceType]isEqualToString:iPhone5]){
-        progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/3.3, progressBgImageView.frame.size.width, 2.0);
+        progressView.frame = CGRectMake(progressBgImageView.frame.origin.x-5, DeviceHeight/3.07, progressBgImageView.frame.size.width+10, 2.0f);
     }
     if([[[Utility getInstance]deviceType]isEqualToString:@"_iPad"]){
         progressView.frame = CGRectMake(progressBgImageView.frame.origin.x, DeviceHeight/3.3, progressBgImageView.frame.size.width, fill.size.height);
     }
     if([gamedata returnlevel]<10){
-        [progressView setProgress:0.5];
+        [progressView setProgress:1.0f];
     }
     else if([gamedata returnlevel]>=10){
         [progressView setProgress:100.0f];
@@ -298,9 +298,9 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
     
     [towerBaseView  addSubview:progressView];
     CGAffineTransform transform = progressView.transform ;//CGAffineTransformMakeScale(1.0f, 6.0f);
-    transform = CGAffineTransformRotate(transform,  M_PI * -0.5);
-    if([[[UIDevice currentDevice] systemVersion]floatValue]>=7.0f){
-        transform = CGAffineTransformScale(transform, 1.2f, 4.5f);    }
+//    transform = CGAffineTransformRotate(transform,  M_PI * -0.5);
+//    if([[[UIDevice currentDevice] systemVersion]floatValue]>=7.0f){
+//        transform = CGAffineTransformScale(transform, 1.2f, 4.5f);    }
     transform =CGAffineTransformMakeRotation( M_PI * -0.5 );
    // transform =CGAffineTransformMakeScale(1.0f, 6.0f);
     
