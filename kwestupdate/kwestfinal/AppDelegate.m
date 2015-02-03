@@ -12,7 +12,7 @@
 #import "Menu.h"
 #import "GameKitHelper.h"
 #import <RevMobAds/RevMobAds.h>
-
+#import <Chartboost/Chartboost.h>
 @implementation MyNavigationController
 
 // The available orientations should be defined in the Info.plist file.
@@ -155,7 +155,10 @@
     [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer:44];
 	// make main window visible
 	[window_ makeKeyAndVisible];
-	
+    [Chartboost startWithAppId:@"54d0817f0d602505919d40aa"
+                  appSignature:@"561700fb558697eddfdc34e97b84cfc548c8f0a5"
+                      delegate:self];
+    
 	return YES;
 }
 
@@ -169,17 +172,17 @@
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
-    Chartboost *cb = [Chartboost sharedChartboost];
-    
-    cb.appId = @"5314552cf8975c4d3043299f";
-    cb.appSignature = @"35cf6cb0e44f852b82ae8f8229688e084e840100";
+//    Chartboost *cb = [Chartboost sharedChartboost];
+//    
+//    cb.appId = @"5314552cf8975c4d3043299f";
+//    cb.appSignature = @"35cf6cb0e44f852b82ae8f8229688e084e840100";
     
     // Required for use of delegate methods. See "Advanced Topics" section below.
    // cb.delegate = self;
     
     // Begin a user session. Must not be dependent on user actions or any prior network requests.
     // Must be called every time your app becomes active.
-    [cb startSession];
+    //[cb startSession];
     
     // Show an interstitial
   //  [cb showInterstitial];
@@ -226,6 +229,24 @@
     NSLog(@"ChartBoost erro _%d",error);
 }
 
+- (void)didFailToLoadRewardedVideo:(CBLocation)location
+                         withError:(CBLoadError)error{
+    
+}
+- (void)didDisplayRewardedVideo:(CBLocation)location{
+    
+}
+- (void)didDismissRewardedVideo:(CBLocation)location{
+
+}
+- (void)didCloseRewardedVideo:(CBLocation)location{
+
+}
+
+- (void)didCompleteRewardedVideo:(CBLocation)location
+                      withReward:(int)reward{
+
+}
 + (void)initialize {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     

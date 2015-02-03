@@ -17,7 +17,7 @@
 #import <RevMobAds/RevMobAds.h>
 #import "Utility.h"
 #import "Score.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #import "Score.h"
 #define MysterySolver   @"MysterySolver"
 #define fakeAlert 0
@@ -51,7 +51,7 @@
         }
         if(![[GameData GameDataManager] returnpremium]){
          if ([[GameData GameDataManager] returnknop]>40)
-                [[Chartboost sharedChartboost]showInterstitial];
+             [Chartboost showInterstitial:CBLocationQuests];
 
         }
        // [self createQuestBtnView];

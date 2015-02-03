@@ -16,7 +16,7 @@
 #import "Utility.h"
 #import "FBShareViewController.h"
 #import "GameKitHelper.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #import "InAppPurchase.h"
 #define premiumAlert 1
 #define resetAlert   2

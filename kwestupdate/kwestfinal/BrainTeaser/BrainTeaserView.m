@@ -15,7 +15,7 @@
 #import "GameData.h"
 #import "BasePopUpView.h"
 #import "Utility.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #define BrainTeaserSceneTag 444
 @implementation BrainTeaserView
 +(CCScene*)scene{
@@ -41,7 +41,7 @@
         }
         if(![[GameData GameDataManager] returnpremium]){
             if ([[GameData GameDataManager] returnknop]>20)
-                [[Chartboost sharedChartboost] showInterstitial];
+                [Chartboost showInterstitial:CBLocationQuests];
 //            [[RevMobAds session] showFullscreen];
 //            ad = [[RevMobAds session] bannerView];
 //            ad.delegate = self;
@@ -390,7 +390,7 @@
 }
 - (void)revmobAdDidFailWithError:(NSError *)error{
        // [ad release];
-    [[Chartboost sharedChartboost] showInterstitial];
+    [Chartboost showInterstitial:CBLocationQuests];
 }
 
 

@@ -14,7 +14,7 @@
 #import "Utility.h"
 #import "FBShareViewController.h"
 #import "InAppPurchase.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #import "KnowledgePathstat.h"
 #define alreadyHave 4
 #define keyofwisdombtntag 14
@@ -63,7 +63,7 @@
     int probabilityOfChartBoost = arc4random()%100;
     int probabilityOfRevmob = arc4random()%100;
     if(probabilityOfChartBoost<30){
-        [[Chartboost sharedChartboost]showInterstitial];
+        [Chartboost showInterstitial:CBLocationAchievements];
     }
     else if(probabilityOfRevmob<40){
         [[RevMobAds session] showFullscreen];

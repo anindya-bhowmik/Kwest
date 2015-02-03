@@ -17,7 +17,7 @@
 #import <RevMobAds/RevMobAds.h>
 #import "InAppPurchase.h"
 #import "Score.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #define slider_Min 80.0f
 #define slider_Max 190.0f
 
@@ -81,7 +81,7 @@
           int probabilityOfChartBoost = arc4random()%100;
           int probabilityOfRevmob = arc4random()%100;
           if(probabilityOfChartBoost<30){
-              [[Chartboost sharedChartboost]showInterstitial];
+             [Chartboost showInterstitial:CBLocationItemStore];
           }
           else if(probabilityOfRevmob<20){
               [[RevMobAds session] showFullscreen];

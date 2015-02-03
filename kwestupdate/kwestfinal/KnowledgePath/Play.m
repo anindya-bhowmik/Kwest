@@ -18,7 +18,7 @@
 #import "OptionView.h"
 #import "Utility.h"
 #import <RevMobAds/RevMobAds.h>
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #import "BrainArenaMenu.h"
 #import "GameData.h"
 #import "Score.h"
@@ -1041,7 +1041,7 @@ CCSprite *bg ;
     int probabilityOfChartBoost = arc4random()%100;
     int probabilityOfRevmob = arc4random()%100;
     if(probabilityOfChartBoost<30){
-        [[Chartboost sharedChartboost]showInterstitial];
+        [Chartboost showInterstitial:CBLocationGameOver];
     }
     else if(probabilityOfRevmob<40){
         [[RevMobAds session] showFullscreen];

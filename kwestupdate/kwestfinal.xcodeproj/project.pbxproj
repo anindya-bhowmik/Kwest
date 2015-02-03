@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		072D0AF7183290CB00ED3281 /* Toweofwisdombg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 072D0AF6183290CB00ED3281 /* Toweofwisdombg-568h@2x.png */; };
-		07430DD51A7804000001EF35 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E91D0018CC76C0006E382A /* libChartboost.a */; };
 		074E67F71883D00100C075CF /* progressbar-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 074E67F61883D00100C075CF /* progressbar-568h@2x.png */; };
 		074E683C1883E2E400C075CF /* buygoldbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 074E683B1883E2E400C075CF /* buygoldbtn.png */; };
 		076E56281838C7F100164B28 /* thesliders@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E56191838C7F100164B28 /* thesliders@2x~ipad.png */; };
@@ -733,8 +732,7 @@
 		A72853E618D67580004FF7FB /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = A72853E318D67580004FF7FB /* 40.png */; };
 		A72853E718D67580004FF7FB /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = A72853E418D67580004FF7FB /* 57.png */; };
 		A72853EA18D6767D004FF7FB /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = A72853E818D6767D004FF7FB /* 72.png */; };
-		A7E91D0218CC76C0006E382A /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = A7E91CFE18CC76C0006E382A /* CHANGELOG.md */; };
-		A7E91D0418CC76C0006E382A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A7E91D0118CC76C0006E382A /* README.md */; };
+		CE1B9FEC1A80B9A2003C1852 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B9FEB1A80B9A2003C1852 /* Chartboost.framework */; };
 		CE6FEC7E1A78CD14004D2B98 /* libFlurry_6.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FEC7D1A78CD14004D2B98 /* libFlurry_6.0.0.a */; };
 		CE6FEC811A78D5CF004D2B98 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FEC801A78D5CF004D2B98 /* RevMobAds.framework */; };
 		CE6FEC841A78DEB0004D2B98 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FEC831A78DEB0004D2B98 /* FacebookSDK.framework */; };
@@ -1679,10 +1677,7 @@
 		A72853E418D67580004FF7FB /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 57.png; path = Resources/57.png; sourceTree = "<group>"; };
 		A72853E818D6767D004FF7FB /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 72.png; path = Resources/72.png; sourceTree = "<group>"; };
 		A72853E918D6767D004FF7FB /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 76.png; path = Resources/76.png; sourceTree = "<group>"; };
-		A7E91CFE18CC76C0006E382A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		A7E91CFF18CC76C0006E382A /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		A7E91D0018CC76C0006E382A /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		A7E91D0118CC76C0006E382A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		CE1B9FEB1A80B9A2003C1852 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chartboost.framework; path = Chartboost/Chartboost.framework; sourceTree = "<group>"; };
 		CE6FEC7D1A78CD14004D2B98 /* libFlurry_6.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.0.0.a; sourceTree = "<group>"; };
 		CE6FEC801A78D5CF004D2B98 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		CE6FEC831A78DEB0004D2B98 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -1711,11 +1706,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1B9FEC1A80B9A2003C1852 /* Chartboost.framework in Frameworks */,
 				CE6FEC8A1A78E11C004D2B98 /* Social.framework in Frameworks */,
 				CE6FEC861A78DFA5004D2B98 /* MediaPlayer.framework in Frameworks */,
 				CE6FEC7E1A78CD14004D2B98 /* libFlurry_6.0.0.a in Frameworks */,
 				CE6FEC841A78DEB0004D2B98 /* FacebookSDK.framework in Frameworks */,
-				07430DD51A7804000001EF35 /* libChartboost.a in Frameworks */,
 				07FFB3DC1826CAE90076EF57 /* Security.framework in Frameworks */,
 				079DC3D8181AFDC300FFE4B7 /* libsqlite3.dylib in Frameworks */,
 				079DC3D6181AF8A200FFE4B7 /* AdSupport.framework in Frameworks */,
@@ -1833,7 +1828,6 @@
 		079DBB05181AC75A00FFE4B7 = {
 			isa = PBXGroup;
 			children = (
-				A7E91CFD18CC76C0006E382A /* Chartboost */,
 				07FFB3DB1826CAE90076EF57 /* Security.framework */,
 				079DC3D7181AFDC100FFE4B7 /* libsqlite3.dylib */,
 				079DC3D5181AF8A100FFE4B7 /* AdSupport.framework */,
@@ -1856,6 +1850,7 @@
 		079DBB10181AC75A00FFE4B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE1B9FEB1A80B9A2003C1852 /* Chartboost.framework */,
 				CE6FEC891A78E11C004D2B98 /* Social.framework */,
 				CE6FEC871A78E100004D2B98 /* Accounts.framework */,
 				CE6FEC851A78DFA5004D2B98 /* MediaPlayer.framework */,
@@ -3451,17 +3446,6 @@
 			path = FBshareController;
 			sourceTree = "<group>";
 		};
-		A7E91CFD18CC76C0006E382A /* Chartboost */ = {
-			isa = PBXGroup;
-			children = (
-				A7E91CFE18CC76C0006E382A /* CHANGELOG.md */,
-				A7E91CFF18CC76C0006E382A /* Chartboost.h */,
-				A7E91D0018CC76C0006E382A /* libChartboost.a */,
-				A7E91D0118CC76C0006E382A /* README.md */,
-			);
-			path = Chartboost;
-			sourceTree = "<group>";
-		};
 		CEA441611A79FB8300888865 /* CustomProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3565,7 +3549,6 @@
 				07FDCE9E183F309300A6A540 /* mission3@2x~ipad.png in Resources */,
 				079DC1EC181AEA1F00FFE4B7 /* Angels.mp3 in Resources */,
 				079DC1ED181AEA1F00FFE4B7 /* Basic.mp3 in Resources */,
-				A7E91D0418CC76C0006E382A /* README.md in Resources */,
 				079DC1EE181AEA1F00FFE4B7 /* Beyond.mp3 in Resources */,
 				079DC1EF181AEA1F00FFE4B7 /* Bonus.mp3 in Resources */,
 				079DC1F0181AEA1F00FFE4B7 /* Brain.mp3 in Resources */,
@@ -3885,7 +3868,6 @@
 				07A992F118281A4A0000F616 /* btn0-hd.png in Resources */,
 				07A992F218281A4A0000F616 /* btn0pressed-hd.png in Resources */,
 				07A992F318281A4A0000F616 /* btn1-hd.png in Resources */,
-				A7E91D0218CC76C0006E382A /* CHANGELOG.md in Resources */,
 				07FDCE9C183F309300A6A540 /* mission1@2x~ipad.png in Resources */,
 				07A992F418281A4A0000F616 /* btn10-hd.png in Resources */,
 				07A992F518281A4A0000F616 /* btn10pressed-hd.png in Resources */,
@@ -4373,6 +4355,7 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Chartboost",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4414,6 +4397,7 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Chartboost",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = kwestFinal/Prefix.pch;

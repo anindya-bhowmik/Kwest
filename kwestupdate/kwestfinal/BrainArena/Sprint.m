@@ -10,7 +10,7 @@
 #import "Menu.h"
 #import "Score.h"
 #import "Utility.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #import <RevMobAds/RevMobAds.h>
 #import "BrainArenaMenu.h"
 @implementation Sprint
@@ -470,7 +470,7 @@
          int probabilityOfChartBoost = arc4random()%100;
          int probabilityOfRevmob = arc4random()%100;
          if(probabilityOfChartBoost<70){
-            [[Chartboost sharedChartboost]showInterstitial];
+             [Chartboost showInterstitial:CBLocationGameOver];
         }
         else if(probabilityOfRevmob<80){
             [[RevMobAds session] showFullscreen];

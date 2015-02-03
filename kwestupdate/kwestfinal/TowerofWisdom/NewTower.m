@@ -13,7 +13,7 @@
 #import "TutorialView.h"
 #import "BasePopUpView.h"
 #import "Utility.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKey";
 
 @implementation NewTower
@@ -43,7 +43,7 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
         }
         if(![gamedata returnpremium]){
             if ([[GameData GameDataManager] returnknop]>100)
-            [[Chartboost sharedChartboost]showInterstitial];
+                [Chartboost showInterstitial:CBLocationAchievements];
         }
         if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"revAskAllow"])
             NSLog(@"Asking ALlowed");

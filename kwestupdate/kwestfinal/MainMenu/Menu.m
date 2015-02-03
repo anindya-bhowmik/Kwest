@@ -23,6 +23,7 @@
 #import <RevMobAds/RevMobAds.h>
 #import "Utility.h"
 #import "GameKitHelper.h"
+#import <Chartboost/Chartboost.h>
 //#import "ResolutionConstant.h"
 // HelloWorldLayer implementation
 @implementation Menu
@@ -80,8 +81,8 @@
 //        GameCenterManager *gameCenterManager = [[[GameCenterManager alloc] init] autorelease];
 //       // [gameCenterManager setDelegate:self];
 //        [gameCenterManager authenticateLocalUser:temp];
-//        
-        
+//
+        [Chartboost showRewardedVideo:CBLocationMainMenu];
         for(int i=0;i<10;i++){
             int p_type =arc4random()%100+1;
             NSLog(@"ptype=%d",p_type);
@@ -537,12 +538,12 @@
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
     else{
-    if ([curdate isEqualToString:refildate]) {
+        if ([curdate isEqualToString:refildate]) {
         NSLog(@"notrefil");
         NSLog(@"Refill Date: %@",refildate);
         NSLog(@"Current Date (equal): %@", curdate);
         
-    }
+        }
     else {
        energy = 30 + 45*[gamedata returnpremium]+ 50*[gamedata returnkeyofenergy] + (3*(karma-5));
 //        int r = arc4random()%99+1;
@@ -561,6 +562,15 @@
     }
     }
     NSLog(@"Current Time  %d",refildate.length);
+}
+
+- (void)didFailToLoadRewardedVideo:(CBLocation)location
+                         withError:(CBLoadError)error{
+
+}
+
+- (void)didDisplayRewardedVideo:(CBLocation)location{
+
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

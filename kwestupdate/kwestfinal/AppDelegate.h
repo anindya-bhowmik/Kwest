@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 // Added only for iOS 6 support
 @interface MyNavigationController : UINavigationController <CCDirectorDelegate>
 @end
 
-@interface AppController : NSObject <UIApplicationDelegate>
+@interface AppController : NSObject <UIApplicationDelegate,ChartboostDelegate>
 {
 	UIWindow *window_;
 	MyNavigationController *navController_;

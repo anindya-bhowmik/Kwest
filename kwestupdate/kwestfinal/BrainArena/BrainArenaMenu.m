@@ -16,7 +16,7 @@
 #import "OptionView.h"
 #import "BrainTeaserView.h"
 #import "Utility.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 
 
 #define noEnergyPremium 2
@@ -459,7 +459,7 @@ CCMenu *brainarenamenu;
 //}
 - (void)revmobAdDidFailWithError:(NSError *)error{
    // [ad release];
-    [[Chartboost sharedChartboost] showInterstitial];
+    [Chartboost showInterstitial:CBLocationGameOver];
     
 }
 

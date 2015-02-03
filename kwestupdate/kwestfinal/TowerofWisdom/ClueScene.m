@@ -11,7 +11,7 @@
 #import "Clues.h"
 #import "ClueFlag.h"
 #import "GameData.h"
-#import "Chartboost.h"
+#import <Chartboost/Chartboost.h>
 #define PriceDialogTag 1
 
 @implementation ClueScene
@@ -35,7 +35,7 @@
         if(![gameData returnpremium]){
           //  int probAd=arc4random()%100;
         if ([[GameData GameDataManager] returnknop]>30)
-            [[Chartboost sharedChartboost]showInterstitial];
+            [Chartboost showInterstitial:CBLocationQuests];
         }
         float yPos = 440*DeviceheightRatio;
         clueBg = [CCSprite spriteWithFile:@"questBg.png"];
