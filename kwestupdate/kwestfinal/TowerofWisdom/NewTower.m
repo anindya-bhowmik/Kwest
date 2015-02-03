@@ -293,7 +293,7 @@ static NSString * const UIGestureRecognizerNodeKey = @"UIGestureRecognizerNodeKe
         progressView.frame = CGRectMake(progressBgImageView.frame.origin.x-5, DeviceHeight/3.48, progressBgImageView.frame.size.width+10, fill.size.height);
     }
     if([gamedata returnlevel]<10){
-        [progressView setProgress:1.0f];
+        [progressView setProgress:(([gamedata returnknop]-curLevelKnopThreshold)/(nexLevelKnopThreshold-curLevelKnopThreshold))];
     }
     else if([gamedata returnlevel]>=10){
         [progressView setProgress:100.0f];

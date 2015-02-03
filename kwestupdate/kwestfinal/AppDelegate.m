@@ -68,8 +68,8 @@
     //[RevMobAds session].testingMode = RevMobAdsTestingModeWithAds;
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:@"FFG4RM5DSRM69W2CM7Z5"];
-    [Chartboost startWithAppId:@"54d0817f0d602505919d40aa"
-                  appSignature:@"561700fb558697eddfdc34e97b84cfc548c8f0a5"
+    [Chartboost startWithAppId:@"5314552cf8975c4d3043299f"
+                  appSignature:@"35cf6cb0e44f852b82ae8f8229688e084e840100"
                       delegate:self];
     
 	// Create the main window
