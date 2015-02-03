@@ -68,6 +68,10 @@
     //[RevMobAds session].testingMode = RevMobAdsTestingModeWithAds;
     [Flurry setCrashReportingEnabled:YES];
     [Flurry startSession:@"FFG4RM5DSRM69W2CM7Z5"];
+    [Chartboost startWithAppId:@"54d0817f0d602505919d40aa"
+                  appSignature:@"561700fb558697eddfdc34e97b84cfc548c8f0a5"
+                      delegate:self];
+    
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
@@ -155,9 +159,7 @@
     [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer:44];
 	// make main window visible
 	[window_ makeKeyAndVisible];
-    [Chartboost startWithAppId:@"54d0817f0d602505919d40aa"
-                  appSignature:@"561700fb558697eddfdc34e97b84cfc548c8f0a5"
-                      delegate:self];
+    
     
 	return YES;
 }
@@ -245,7 +247,16 @@
 
 - (void)didCompleteRewardedVideo:(CBLocation)location
                       withReward:(int)reward{
-
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"vid_popup_displayed_today"];
+    GameData *gamedata = [GameData GameDataManager];
+    [gamedata setEnergy:[gamedata returnenergy]+50];
+    [gamedata setgold:[gamedata returngold]+100];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Award" message:@"You are awarded with 50 Energy and 100 gold for watching the ad" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [alert show];
+        [alert release];
+    });
+   // [[NSNotificationCenter defaultCenter]postNotificationName:@"videoWatched" object:nil];
 }
 + (void)initialize {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

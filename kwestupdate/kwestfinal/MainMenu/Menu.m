@@ -82,7 +82,8 @@
 //       // [gameCenterManager setDelegate:self];
 //        [gameCenterManager authenticateLocalUser:temp];
 //
-        [Chartboost showRewardedVideo:CBLocationMainMenu];
+//        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"videoWatched" object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoAdWatched) name:@"videoWatched" object:nil];
         for(int i=0;i<10;i++){
             int p_type =arc4random()%100+1;
             NSLog(@"ptype=%d",p_type);
@@ -535,16 +536,23 @@
         [gamedata setEnergydate:curdate];
         [gamedata setEnergy:energy];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"isFirstTimeLaunched"];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"vid_popup_displayed_today"];
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
     else{
         if ([curdate isEqualToString:refildate]) {
-        NSLog(@"notrefil");
-        NSLog(@"Refill Date: %@",refildate);
-        NSLog(@"Current Date (equal): %@", curdate);
+            if(![[NSUserDefaults standardUserDefaults]boolForKey:@"vid_popup_displayed_today"]){
+               // [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"vid_popup_displayed_today"];
+                int r=arc4random() %101;
+                if(r<26)
+                    [Chartboost showRewardedVideo:CBLocationHomeScreen];
+            }
         
         }
     else {
+        if([[NSUserDefaults standardUserDefaults]boolForKey:@"vid_popup_displayed_today"]){
+            [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"vid_popup_displayed_today"];
+        }
        energy = 30 + 45*[gamedata returnpremium]+ 50*[gamedata returnkeyofenergy] + (3*(karma-5));
 //        int r = arc4random()%99+1;
 //        NSLog(@"r=%d",r);
@@ -564,13 +572,8 @@
     NSLog(@"Current Time  %d",refildate.length);
 }
 
-- (void)didFailToLoadRewardedVideo:(CBLocation)location
-                         withError:(CBLoadError)error{
-
-}
-
-- (void)didDisplayRewardedVideo:(CBLocation)location{
-
+-(void)videoAdWatched{
+   
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
