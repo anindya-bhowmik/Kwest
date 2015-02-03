@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #define iPhone5 @"-568h" 
+#define iPhone4s @"4s"
 @interface Utility : NSObject{
     NSString *deviceType;
 }

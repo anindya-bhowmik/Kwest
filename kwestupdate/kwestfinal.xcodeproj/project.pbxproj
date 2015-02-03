@@ -4366,8 +4366,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4395,8 +4395,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
+				PROVISIONING_PROFILE = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4407,8 +4407,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Md. Belayet Hossain (AVL683FNDJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kojiro katagiri (HJG5WJ66YJ)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4434,8 +4434,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "55e1d58f-9e54-4429-adf2-ae5639a52c82";
+				PROVISIONING_PROFILE = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b5a0e85a-71fd-48dc-82bf-734a677bfe4a";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;

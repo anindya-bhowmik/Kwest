@@ -27,15 +27,18 @@ static Utility *instance =nil;
             instance= [Utility new];
             CGRect screenBounds = [[UIScreen mainScreen] bounds];
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-            instance.deviceType = @"_iPad";
+                instance.deviceType = @"_iPad";
             }
             else if (screenBounds.size.height == 568) {
                 
                 instance.deviceType = iPhone5;
                 
             }
-            else {
-            instance.deviceType = @"";
+            else if (screenBounds.size.height == 480) {
+                instance.deviceType = iPhone4s;
+            }
+            else{
+                instance.deviceType = @"";
             }
         }
     }
